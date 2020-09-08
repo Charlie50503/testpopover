@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<span v-b-popover.hover.bottom="required_label">
+		test
+	</span>
+	<span v-b-popover.hover.bottom="required_label">
+		test
+	</span>
+	<span v-b-popover.hover.bottom="required_label">
+		test
+	</span>
+	<span v-b-popover.hover.bottom="required_label">
+		test
+	</span>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+	export default {
+		data() {
+			return {
+				required_label:'required',
+			}
+		},
+		methods:{
+			// jumpToNext() {
+			// 	this.$router.push({
+			// 		path: '/Next'
+			// 	})
+			// },
+		},
+		beforeDestroy(){
+			console.log("beforeDestroy")
+		},
+	}
 </script>
